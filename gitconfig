@@ -1,0 +1,10 @@
+[user]
+	name = Dave Pirotte
+	email = dpirotte@gmail.com
+[alias]
+  co = checkout
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
