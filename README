@@ -1,0 +1,6 @@
+Installation
+
+	git clone git://github.com/dpirotte/dotfiles .dotfiles
+	cd ~/.dotfiles
+  rake install
+  vim ~/.gitconfig
