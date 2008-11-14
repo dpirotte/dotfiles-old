@@ -1,4 +1,24 @@
-vbell off
+vbell	off
 autodetach on
+msgwait	1
 startup_message off
-defscrollback 2500
+defscrollback	10000
+
+term screen-256color
+termcapinfo xterm*|Eterm|mlterm|rxvt 'hs:ts=\E]0;:fs=\007:ds=\E]0;screen\007'
+
+hardstatus alwayslastline
+#hardstatus string '%{= kG}[ %{G}%H %{g}][ %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d {W}%c %{g}]'
+hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%=%{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
+
+# remove some dangerous key bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+# make them safer
+bind 'K' kill
+bind '}' history
